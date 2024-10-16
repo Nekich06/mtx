@@ -16,4 +16,10 @@ void output_matrix(const int * const * t, size_t m, size_t n) {
 		}
 	}
 }
+void del_matrix(int ** t, size_t m) {
+	for (size_t i = 0; i < M; ++i) {
+		delete[] t[i];
+	}
+	delete[] t;
+}
 
