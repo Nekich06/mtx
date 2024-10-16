@@ -1,7 +1,5 @@
 #include <iostream>
-
-int ** create_matrix(size_t m, size_t n);
-void del_matrix(int ** t, size_t m, size_t n);
+#include "matrix.hpp"
 
 int main()
 {
