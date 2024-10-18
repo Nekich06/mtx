@@ -22,19 +22,12 @@ int ** create_matrix(size_t m, size_t n)
 
 void input_matrix(int ** t, size_t m, size_t n)
 {
-  try
+  for (size_t i = 0; i < m; ++i)
   {
-    for (size_t i = 0; i < m; ++i)
+    for (size_t j = 0; j < n; ++j)
     {
-      for (size_t j = 0; j < n; ++j)
-      {
-        std::cin >> t[i][j];
-      }
+      std::cin >> t[i][j];
     }
-  }
-  catch (const std::invalid_argument & e)
-  {
-    throw;
   }
 }
 
