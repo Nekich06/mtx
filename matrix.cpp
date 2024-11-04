@@ -31,6 +31,17 @@ void input_matrix(std::istream & in, int ** t, size_t m, size_t n)
   }
 }
 
+void input_matrix(int value, int ** t, size_t m, size_t n)
+{
+  for (size_t i = 0; i < m; ++i)
+  {
+    for (size_t j = 0; j < n; ++j)
+    {
+      t[i][j] = value;
+    }
+  }
+}
+
 void output_matrix(std::ostream & out, const int * const * t, size_t m, size_t n)
 {
   for (size_t i = 0; i < m; ++i)
