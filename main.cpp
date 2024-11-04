@@ -27,7 +27,10 @@ int main()
   mtx_2.fillUpMatrix(1); // Method #3
   std::cout << "Output of second matrix after filling up it with other value:\n";
   mtx_2.output(std::cout);
-  std::clog << "Check output of first:\n";
+  std::cout << "Check output of first matrix:\n";
+  mtx.output(std::cout);
+  mtx.change_size(mtx, m + 1, n + 1); // Method #4
+  std::cout << "Output of changed first matrix:\n";
   mtx.output(std::cout);
 }
 
