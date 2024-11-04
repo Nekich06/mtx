@@ -24,8 +24,10 @@ int main()
   Matrix mtx_2(mtx); // Copy-constructor
   std::cout << "Output of second matrix, which is copied from first:\n";
   mtx_2.output(std::cout);
-  mtx_2.fillUpMatrix(0); // Method #3
+  mtx_2.fillUpMatrix(1); // Method #3
   std::cout << "Output of second matrix after filling up it with other value:\n";
   mtx_2.output(std::cout);
+  std::clog << "Check output of first:\n";
+  mtx.output(std::cout);
 }
 
