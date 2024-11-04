@@ -20,7 +20,7 @@ int ** create_matrix(size_t m, size_t n)
   return t;
 }
 
-void input_matrix(int ** t, size_t m, size_t n)
+void input_matrix(std::istream & in, int ** t, size_t m, size_t n)
 {
   for (size_t i = 0; i < m; ++i)
   {
@@ -31,7 +31,7 @@ void input_matrix(int ** t, size_t m, size_t n)
   }
 }
 
-void output_matrix(const int * const * t, size_t m, size_t n)
+void output_matrix(std::ostream & out, const int * const * t, size_t m, size_t n)
 {
   for (size_t i = 0; i < m; ++i)
   {

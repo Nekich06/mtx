@@ -1,33 +1,22 @@
 #include <iostream>
 #include "matrix.hpp"
+#include "class_matrix.hpp"
 
 int main()
 {
-  size_t M = 0, N = 0;
-  std::cin >> M >> N;
-  if (!std::cin)
+  size_t m = 0, n = 0;
+  if (!(std::cin >> m >> n))
   {
     std::cerr << "ERROR:Invalid value\n";
     return 1;
   }
-  int ** t = nullptr;
-  try
-  {
-    t = create_matrix(M, N);
-  }
-  catch (const std::bad_alloc & e)
-  {
-    std::cerr << "ERROR:Out of memory\n";
-    return 2;
-  }
-  input_matrix(t, M, N);
+  Matrix mtx(m, n);
+  mtx.input(std::cin);
   if (!std::cin)
   {
-    del_matrix(t, M);
-    std::cerr << "ERROR:Invalid value\n";
+    std::cerr << "ERROR:Invaliud value\n";
     return 1;
   }
-  output_matrix(t, M, N);
-  del_matrix(t, M);
+  mtx.output(std::cout);
 }
 
